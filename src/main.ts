@@ -1,8 +1,8 @@
 import { CommitCreateEvent, Jetstream } from '@skyware/jetstream';
 import fs from 'node:fs';
 
-import { CURSOR_UPDATE_INTERVAL, DID, FIREHOSE_URL, HOST, METRICS_PORT, PORT, WANTED_COLLECTION } from './config.js';
-import { label, labelerServer } from './label.js';
+import { CURSOR_UPDATE_INTERVAL, FIREHOSE_URL, METRICS_PORT, WANTED_COLLECTION, getLabelerConfigs } from './config.js';
+import { LabelerContext } from './label.js';
 import logger from './logger.js';
 import { startMetricsServer } from './metrics.js';
 
@@ -34,6 +34,21 @@ const jetstream = new Jetstream({
   cursor: cursor,
 });
 
+// Setup Labelers
+const configs = getLabelerConfigs();
+const labelers: LabelerContext[] = [];
+
+if (configs.length === 0) {
+  logger.error('No labeler configurations found. Please check .env or accounts.json');
+  process.exit(1);
+}
+
+for (const config of configs) {
+  logger.info(`Initializing labeler for ${config.did}`);
+  const context = new LabelerContext(config);
+  labelers.push(context);
+}
+
 jetstream.on('open', () => {
   logger.info(
     `Connected to Jetstream at ${FIREHOSE_URL} with cursor ${jetstream.cursor} (${epochUsToDateTime(jetstream.cursor!)})`,
@@ -59,20 +74,32 @@ jetstream.on('error', (error) => {
 
 jetstream.onCreate(WANTED_COLLECTION, (event: CommitCreateEvent<typeof WANTED_COLLECTION>) => {
   // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-  if (event.commit?.record?.subject?.uri?.includes(DID)) {
-    label(event.did, event.commit.record.subject.uri.split('/').pop()!);
+  if (event.commit?.record?.subject?.uri) {
+    const subjectUri = event.commit.record.subject.uri;
+
+    // Find which labeler this event targets
+    for (const labeler of labelers) {
+      if (subjectUri.includes(labeler.config.did)) {
+        labeler.processLabel(event.did, subjectUri.split('/').pop()!);
+      }
+    }
   }
 });
 
 const metricsServer = startMetricsServer(METRICS_PORT);
 
-labelerServer.app.listen({ port: PORT, host: HOST }, (error, address) => {
-  if (error) {
-    logger.error('Error starting server: %s', error);
-  } else {
-    logger.info(`Labeler server listening on ${address}`);
-  }
-});
+for (const labeler of labelers) {
+  const port = labeler.config.port ?? 4100;
+  const host = labeler.config.host ?? '127.0.0.1';
+
+  labeler.server.app.listen({ port, host }, (error, address) => {
+    if (error) {
+      logger.error(`Error starting server for ${labeler.config.did}: %s`, error);
+    } else {
+      logger.info(`Labeler server for ${labeler.config.did} listening on ${address}`);
+    }
+  });
+}
 
 jetstream.start();
 
@@ -81,7 +108,9 @@ function shutdown() {
     logger.info('Shutting down gracefully...');
     fs.writeFileSync('cursor.txt', jetstream.cursor!.toString(), 'utf8');
     jetstream.close();
-    labelerServer.stop();
+    for (const labeler of labelers) {
+      labeler.server.stop();
+    }
     metricsServer.close();
   } catch (error) {
     logger.error(`Error shutting down gracefully: ${error}`);

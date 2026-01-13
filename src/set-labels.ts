@@ -1,33 +1,45 @@
 import { type ComAtprotoLabelDefs } from '@atproto/api';
 import { type LoginCredentials, setLabelerLabelDefinitions } from '@skyware/labeler/scripts';
 
-import { BSKY_IDENTIFIER, BSKY_PASSWORD } from './config.js';
-import { LABELS } from './constants.js';
+import { getLabelerConfigs } from './config.js';
+import { getLabelsForHandle } from './constants.js';
 import logger from './logger.js';
 
-const loginCredentials: LoginCredentials = {
-  identifier: BSKY_IDENTIFIER,
-  password: BSKY_PASSWORD,
-};
+const configs = getLabelerConfigs();
 
-const labelDefinitions: ComAtprotoLabelDefs.LabelValueDefinition[] = [];
+for (const config of configs) {
+  if (!config.bskyHandle || !config.bskyPassword) {
+    logger.warn(`Skipping ${config.did}: Missing BlueSky identifier or password.`);
+    continue;
+  }
 
-for (const label of LABELS) {
-  const labelValueDefinition: ComAtprotoLabelDefs.LabelValueDefinition = {
-    identifier: label.identifier,
-    severity: 'inform',
-    blurs: 'none',
-    defaultSetting: 'warn',
-    adultOnly: false,
-    locales: label.locales,
+  const loginCredentials: LoginCredentials = {
+    identifier: config.bskyHandle,
+    password: config.bskyPassword,
   };
 
-  labelDefinitions.push(labelValueDefinition);
-}
+  const labelDefinitions: ComAtprotoLabelDefs.LabelValueDefinition[] = [];
 
-try {
-  await setLabelerLabelDefinitions(loginCredentials, labelDefinitions);
-  logger.info('Label definitions set successfully.');
-} catch (error) {
-  logger.error(`Error setting label definitions: ${error}`);
+  const relevantLabels = getLabelsForHandle(config.bskyHandle);
+
+  for (const label of relevantLabels) {
+    const labelValueDefinition: ComAtprotoLabelDefs.LabelValueDefinition = {
+      identifier: label.identifier,
+      severity: 'inform',
+      blurs: 'none',
+      defaultSetting: 'warn',
+      adultOnly: false,
+      locales: label.locales,
+    };
+
+    labelDefinitions.push(labelValueDefinition);
+  }
+
+  try {
+    logger.info(`Setting labels for ${config.bskyHandle}...`);
+    await setLabelerLabelDefinitions(loginCredentials, labelDefinitions);
+    logger.info(`Label definitions set successfully for ${config.bskyHandle}.`);
+  } catch (error) {
+    logger.error(`Error setting label definitions for ${config.bskyHandle}: ${error}`);
+  }
 }
