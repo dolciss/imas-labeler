@@ -46,6 +46,9 @@ Run `bunx @skyware/labeler setup` to convert an existing account into a labeler.
 Copy the `.env.example` file to `.env`. This file contains global settings shared across all labelers, like the Jetstream URL and metrics port.
 
 ```Dotenv
+PDS_URL=https://bsky.social
+DEFAULT_LANGUAGE=en
+POST_DATE=2026-01-01
 METRICS_PORT=4101
 FIREHOSE_URL=wss://jetstream.atproto.tools/subscribe
 CURSOR_UPDATE_INTERVAL=10000

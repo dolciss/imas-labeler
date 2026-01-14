@@ -3,6 +3,9 @@ import fs from 'node:fs';
 
 import { LabelerConfig } from './types.js';
 
+export const PDS_URL = process.env.PDS_URL ?? 'https://bsky.social';
+export const DEFAULT_LANGUAGE = process.env.DEFAULT_LANGUAGE ?? 'en';
+export const POST_DATE = process.env.POST_DATE ? new Date(Date.parse(process.env.POST_DATE)) : new Date();
 export const METRICS_PORT = process.env.METRICS_PORT ? Number(process.env.METRICS_PORT) : 4101;
 export const FIREHOSE_URL = process.env.FIREHOSE_URL ?? 'wss://jetstream.atproto.tools/subscribe';
 export const WANTED_COLLECTION = 'app.bsky.feed.like';
