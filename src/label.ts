@@ -81,14 +81,14 @@ export class LabelerContext {
   }
 
   public deleteLabel(did: string, rkey: string) {
-    logger.info(`[${this.config.did}] Received unlike (rkey: ${rkey}) from ${did}`);
+    //logger.info(`[${this.config.did}] Received unlike (rkey: ${rkey}) from ${did}`);
 
     const mapping = this.server.db
       .prepare('SELECT identifier FROM like_labels WHERE rkey = ? AND did = ? AND labeler_did = ?')
       .get(rkey, did, this.config.did) as { identifier: string } | undefined;
 
     if (!mapping) {
-      logger.info(`[${this.config.did}] No label mapping found for rkey ${rkey}. Doing nothing.`);
+      //logger.info(`[${this.config.did}] No label mapping found for rkey ${rkey}. Doing nothing.`);
       return;
     }
 
