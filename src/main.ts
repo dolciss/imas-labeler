@@ -1,7 +1,14 @@
 import { CommitCreateEvent, CommitDeleteEvent, Jetstream } from '@skyware/jetstream';
 import fs from 'node:fs';
 
-import { CURSOR_UPDATE_INTERVAL, FIREHOSE_URL, METRICS_PORT, WANTED_COLLECTION, getLabelerConfigs } from './config.js';
+import {
+  CURSOR_UPDATE_INTERVAL,
+  FIREHOSE_URL,
+  METRICS_HOST,
+  METRICS_PORT,
+  WANTED_COLLECTION,
+  getLabelerConfigs,
+} from './config.js';
 import { LabelerContext } from './label.js';
 import logger from './logger.js';
 import { startMetricsServer } from './metrics.js';
@@ -55,7 +62,10 @@ jetstream.on('open', () => {
   );
   cursorUpdateInterval = setInterval(() => {
     if (jetstream.cursor) {
-      logger.info(`Cursor updated to: ${jetstream.cursor} (${epochUsToDateTime(jetstream.cursor)})`);
+      const diffMs = (Date.now() * 1000 - jetstream.cursor) / 1000;
+      logger.info(
+        `Cursor updated to: ${jetstream.cursor} (${epochUsToDateTime(jetstream.cursor)} : ${diffMs}ms delay)`,
+      );
       fs.writeFile('cursor.txt', jetstream.cursor.toString(), (err) => {
         if (err) logger.error(err);
       });
@@ -92,7 +102,7 @@ jetstream.onDelete(WANTED_COLLECTION, (event: CommitDeleteEvent<typeof WANTED_CO
   }
 });
 
-const metricsServer = startMetricsServer(METRICS_PORT);
+const metricsServer = startMetricsServer(METRICS_PORT, METRICS_HOST);
 
 for (const labeler of labelers) {
   const port = labeler.config.port ?? 4100;
