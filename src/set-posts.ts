@@ -1,9 +1,9 @@
 import { Bot } from '@skyware/bot';
 
-import { getLabelerConfigs } from './config.js';
+import { DEFAULT_LANGUAGE, PDS_URL, POST_DATE, getLabelerConfigs } from './config.js';
 import { getLabelsForHandle } from './constants.js';
 
-const bot = new Bot();
+const bot = new Bot({ service: PDS_URL, langs: [DEFAULT_LANGUAGE] });
 const configs = getLabelerConfigs();
 
 const targetHandle = process.argv[2];
@@ -51,18 +51,34 @@ if (answer === 'y') {
   process.exit(0);
 }
 
+/*
 const post = await bot.post({
   text: 'Like the replies to this post to receive labels.',
   threadgate: { allowLists: [] },
 });
+*/
 
 const labelNames = getLabelsForHandle(targetConfig.bskyHandle).map((label) =>
   label.locales.map((locale) => locale.name).join(' | '),
 );
 const labelRkeys: Record<string, string> = {};
 for (const labelName of labelNames) {
-  const labelPost = await post.reply({ text: labelName });
+  //const labelPost = await post.reply({ text: labelName });
+  const nowDate = new Date();
+  const labelPost = await bot.post({
+    text: labelName,
+    threadgate: { allowLists: [] },
+    createdAt: new Date(
+      POST_DATE.getFullYear(),
+      POST_DATE.getMonth(),
+      POST_DATE.getDate(),
+      nowDate.getHours(),
+      nowDate.getMinutes(),
+      nowDate.getSeconds(),
+    ),
+  });
   labelRkeys[labelName] = labelPost.uri.split('/').pop()!;
+  await new Promise((resolve) => setTimeout(resolve, 5000));
 }
 
 console.log(`Label rkeys for ${targetConfig.bskyHandle}:`);
@@ -70,16 +86,5 @@ for (const [name, rkey] of Object.entries(labelRkeys)) {
   console.log(`    name: '${name}',`);
   console.log(`    rkey: '${rkey}',`);
 }
-
-const deletePost = await bot.post({ text: 'Like this post to delete all labels.' });
-const deletePostRkey = deletePost.uri.split('/').pop()!;
-console.log('Delete post rkey:');
-console.log('Add the following to DELETE array in constants.ts:');
-console.log(`  {`);
-console.log(`    rkey: '${deletePostRkey}',`);
-if (targetConfig.bskyHandle) {
-  console.log(`    targetHandle: '${targetConfig.bskyHandle}',`);
-}
-console.log(`  },`);
 
 process.exit(0);

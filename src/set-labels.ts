@@ -1,7 +1,7 @@
 import { type ComAtprotoLabelDefs } from '@atproto/api';
 import { type LoginCredentials, setLabelerLabelDefinitions } from '@skyware/labeler/scripts';
 
-import { getLabelerConfigs } from './config.js';
+import { PDS_URL, getLabelerConfigs } from './config.js';
 import { getLabelsForHandle } from './constants.js';
 import logger from './logger.js';
 
@@ -14,6 +14,7 @@ for (const config of configs) {
   }
 
   const loginCredentials: LoginCredentials = {
+    pds: PDS_URL,
     identifier: config.bskyHandle,
     password: config.bskyPassword,
   };
