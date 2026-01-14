@@ -67,15 +67,21 @@ export const LABELS: Label[] = [
   {
     rkey: 'insert-rkey-here',
     identifier: 'earth',
-    locales: [...],
-    targetHandle: 'labeler1.bsky.social' // Labels for the first account
+    locales: [
+      { lang: 'en', name: 'Earth 🌎', description: 'The element of Earth' },
+      { lang: 'ja', name: '土 🌎', description: '土の属性' },
+    ],
+    targetHandle: 'labeler1.bsky.social', // Labels for the first account
   },
-   {
+  {
     rkey: 'insert-rkey-here',
     identifier: 'fire',
-    locales: [...],
-    targetHandle: 'labeler2.bsky.social' // Labels for the second account
-  }
+    locales: [
+      { lang: 'en', name: 'Fire 🔥', description: 'The element of Fire' },
+      { lang: 'ja', name: '火 🔥', description: '火の属性' },
+    ],
+    targetHandle: 'labeler2.bsky.social', // Labels for the second account
+  },
 ];
 ```
 
