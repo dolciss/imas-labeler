@@ -16,7 +16,7 @@ export function getLabelerConfigs(): LabelerConfig[] {
   if (fs.existsSync('accounts.json')) {
     try {
       const fileContent = fs.readFileSync('accounts.json', 'utf8');
-      const jsonConfigs = JSON.parse(fileContent);
+      const jsonConfigs = JSON.parse(fileContent) as LabelerConfig[] | LabelerConfig;
       if (Array.isArray(jsonConfigs)) {
         configs.push(...jsonConfigs);
       } else {

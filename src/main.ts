@@ -1,4 +1,4 @@
-import { CommitCreateEvent, Jetstream } from '@skyware/jetstream';
+import { CommitCreateEvent, CommitDeleteEvent, Jetstream } from '@skyware/jetstream';
 import fs from 'node:fs';
 
 import { CURSOR_UPDATE_INTERVAL, FIREHOSE_URL, METRICS_PORT, WANTED_COLLECTION, getLabelerConfigs } from './config.js';
@@ -80,9 +80,15 @@ jetstream.onCreate(WANTED_COLLECTION, (event: CommitCreateEvent<typeof WANTED_CO
     // Find which labeler this event targets
     for (const labeler of labelers) {
       if (subjectUri.includes(labeler.config.did)) {
-        labeler.processLabel(event.did, subjectUri.split('/').pop()!);
+        labeler.createLabel(event.did, event.commit.rkey, event.commit.record);
       }
     }
+  }
+});
+
+jetstream.onDelete(WANTED_COLLECTION, (event: CommitDeleteEvent<typeof WANTED_COLLECTION>) => {
+  for (const labeler of labelers) {
+    labeler.deleteLabel(event.did, event.commit.rkey);
   }
 });
 

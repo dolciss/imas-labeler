@@ -15,8 +15,3 @@ export interface LabelerConfig {
   bskyHandle?: string;
   bskyPassword?: string;
 }
-
-export interface DeletePost {
-  rkey: string;
-  targetHandle?: string;
-}

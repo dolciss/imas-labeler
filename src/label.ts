@@ -1,8 +1,8 @@
-import { ComAtprotoLabelDefs } from '@atcute/client/lexicons';
 import { LabelerServer } from '@skyware/labeler';
 
-import { DELETE, LABELS, LABEL_LIMIT, getDeleteRkeyForHandle, getLabelsForHandle } from './constants.js';
+import { LABELS, getLabelsForHandle } from './constants.js';
 import logger from './logger.js';
+import { labelOperationsTotal } from './metrics.js';
 import { LabelerConfig } from './types.js';
 
 export class LabelerContext {
@@ -12,93 +12,105 @@ export class LabelerContext {
   constructor(config: LabelerConfig) {
     this.config = config;
     this.server = new LabelerServer({ did: config.did, signingKey: config.signingKey });
+
+    // Initialize mapping table for likes and labels
+    this.server.db
+      .prepare(
+        `
+      CREATE TABLE IF NOT EXISTS like_labels (
+        rkey TEXT PRIMARY KEY,
+        did TEXT,
+        labeler_did TEXT,
+        identifier TEXT
+      )
+    `,
+      )
+      .run();
   }
 
-  public processLabel(did: string, rkey: string) {
-    logger.info(`[${this.config.did}] Received rkey: ${rkey} for ${did}`);
+  public createLabel(did: string, likeRkey: string, record: { subject: { uri: string } }) {
+    logger.info(`[${this.config.did}] Received like (rkey: ${likeRkey}) from ${did}`);
 
-    if (rkey === 'self') {
+    if (likeRkey === 'self') {
       logger.info(`[${this.config.did}] ${did} liked the labeler. Returning.`);
       return;
     }
-    try {
-      const labels = this.fetchCurrentLabels(did);
 
-      const deleteRkey = getDeleteRkeyForHandle(this.config.bskyHandle);
-      if (deleteRkey && rkey === deleteRkey) {
-        this.deleteAllLabels(did, labels);
-      } else {
-        this.addOrUpdateLabel(did, rkey, labels);
-      }
-    } catch (error) {
-      logger.error(`[${this.config.did}] Error in processLabel: ${error}`);
-    }
-  }
+    const subjectUri = record.subject.uri;
+    const postRkey = subjectUri.split('/').pop()!;
 
-  private fetchCurrentLabels(did: string) {
-    const query = this.server.db
-      .prepare<string[]>(`SELECT * FROM labels WHERE uri = ?`)
-      .all(did) as ComAtprotoLabelDefs.Label[];
-
-    const labels = query.reduce((set, label) => {
-      if (!label.neg) set.add(label.val);
-      else set.delete(label.val);
-      return set;
-    }, new Set<string>());
-
-    if (labels.size > 0) {
-      logger.info(`[${this.config.did}] Current labels: ${Array.from(labels).join(', ')}`);
-    }
-
-    return labels;
-  }
-
-  private deleteAllLabels(did: string, labels: Set<string>) {
-    const labelsToDelete: string[] = Array.from(labels);
-
-    if (labelsToDelete.length === 0) {
-      logger.info(`[${this.config.did}] No labels to delete`);
-    } else {
-      logger.info(`[${this.config.did}] Labels to delete: ${labelsToDelete.join(', ')}`);
-      try {
-        this.server.createLabels({ uri: did }, { negate: labelsToDelete });
-        logger.info(`[${this.config.did}] Successfully deleted all labels`);
-      } catch (error) {
-        logger.error(`[${this.config.did}] Error deleting all labels: ${error}`);
-      }
-    }
-  }
-
-  private addOrUpdateLabel(did: string, rkey: string, labels: Set<string>) {
     const relevantLabels = getLabelsForHandle(this.config.bskyHandle);
-    const newLabel = relevantLabels.find((label) => label.rkey === rkey);
+    const newLabel = relevantLabels.find((label) => label.rkey === postRkey);
 
     if (!newLabel) {
       // Check if it exists at all but filtered out
-      const anyLabel = LABELS.find((label) => label.rkey === rkey);
+      const anyLabel = LABELS.find((label) => label.rkey === postRkey);
       if (!anyLabel) {
         logger.warn(
-          `[${this.config.did}] New label not found: ${rkey}. Likely liked a post that's not one for labels.`,
+          `[${this.config.did}] New label not found: post rkey ${postRkey} (like rkey ${likeRkey}). Likely liked a post that's not one for labels.`,
         );
       }
       return;
     }
-    logger.info(`[${this.config.did}] New label: ${newLabel.identifier}`);
-
-    if (labels.size >= LABEL_LIMIT) {
-      try {
-        this.server.createLabels({ uri: did }, { negate: Array.from(labels) });
-        logger.info(`[${this.config.did}] Successfully negated existing labels: ${Array.from(labels).join(', ')}`);
-      } catch (error) {
-        logger.error(`[${this.config.did}] Error negating existing labels: ${error}`);
-      }
-    }
+    logger.info(`[${this.config.did}] New label: ${newLabel.identifier} (post rkey: ${postRkey})`);
 
     try {
       this.server.createLabel({ uri: did, val: newLabel.identifier });
+
+      // Store mapping: like record rkey -> identifier
+      this.server.db
+        .prepare('INSERT OR REPLACE INTO like_labels (rkey, did, labeler_did, identifier) VALUES (?, ?, ?, ?)')
+        .run(likeRkey, did, this.config.did, newLabel.identifier);
+
       logger.info(`[${this.config.did}] Successfully labeled ${did} with ${newLabel.identifier}`);
+      labelOperationsTotal.inc({
+        action: 'add',
+        status: 'success',
+        labeler_did: this.config.did,
+        identifier: newLabel.identifier,
+      });
     } catch (error) {
-      logger.error(`[${this.config.did}] Error adding new label: ${error}`);
+      logger.error(`[${this.config.did}] Error in createLabel: ${error}`);
+      labelOperationsTotal.inc({
+        action: 'add',
+        status: 'failure',
+        labeler_did: this.config.did,
+        identifier: newLabel.identifier,
+      });
+    }
+  }
+
+  public deleteLabel(did: string, rkey: string) {
+    logger.info(`[${this.config.did}] Received unlike (rkey: ${rkey}) from ${did}`);
+
+    const mapping = this.server.db
+      .prepare('SELECT identifier FROM like_labels WHERE rkey = ? AND did = ? AND labeler_did = ?')
+      .get(rkey, did, this.config.did) as { identifier: string } | undefined;
+
+    if (!mapping) {
+      logger.info(`[${this.config.did}] No label mapping found for rkey ${rkey}. Doing nothing.`);
+      return;
+    }
+
+    try {
+      this.server.createLabels({ uri: did }, { negate: [mapping.identifier] });
+      this.server.db.prepare('DELETE FROM like_labels WHERE rkey = ?').run(rkey);
+
+      logger.info(`[${this.config.did}] Successfully removed label ${mapping.identifier} from ${did}`);
+      labelOperationsTotal.inc({
+        action: 'remove',
+        status: 'success',
+        labeler_did: this.config.did,
+        identifier: mapping.identifier,
+      });
+    } catch (error) {
+      logger.error(`[${this.config.did}] Error in deleteLabel: ${error}`);
+      labelOperationsTotal.inc({
+        action: 'remove',
+        status: 'failure',
+        labeler_did: this.config.did,
+        identifier: mapping.identifier,
+      });
     }
   }
 }

@@ -1,23 +1,5 @@
-import { DeletePost, Label } from './types.js';
+import { Label } from './types.js';
 
-export const LABEL_LIMIT = 1;
-// Define delete post rkeys here.
-export const DELETE: DeletePost[] = [
-  {
-    rkey: 'insert-rkey-of-delete-post-here',
-    targetHandle: 'bot1.bsky.social',
-  },
-];
-
-export function getDeleteRkeyForHandle(handle: string | undefined): string | undefined {
-  const deletePost = DELETE.find((d) => {
-    if (d.targetHandle && handle) {
-      return d.targetHandle === handle;
-    }
-    return true;
-  });
-  return deletePost?.rkey;
-}
 // Add 'targetHandle' to specify which account should host the label.
 // If 'targetHandle' is omitted, the label implies it is shared or default.
 export const LABELS: Label[] = [

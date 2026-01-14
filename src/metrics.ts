@@ -1,10 +1,17 @@
 import express from 'express';
-import { Registry, collectDefaultMetrics } from 'prom-client';
+import { Counter, Registry, collectDefaultMetrics } from 'prom-client';
 
 import logger from './logger.js';
 
 const register = new Registry();
 collectDefaultMetrics({ register });
+
+export const labelOperationsTotal = new Counter({
+  name: 'imas_labeler_ops_total',
+  help: 'Total number of labeling operations',
+  labelNames: ['action', 'status', 'labeler_did', 'identifier'],
+});
+register.registerMetric(labelOperationsTotal);
 
 const app = express();
 
