@@ -17,3 +17,10 @@ export interface LabelerConfig {
   bskyHandle?: string;
   bskyPassword?: string;
 }
+
+export interface FeedDefinition {
+  shortName: string;
+  displayName: string;
+  description: string;
+  targetHandle?: string;
+}
