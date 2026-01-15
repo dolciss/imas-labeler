@@ -2,6 +2,6 @@
 node_modules
 cursor.txt
 *.log
-labels.db*
+db/
 bun.lockb
 accounts.json

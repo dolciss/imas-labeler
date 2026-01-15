@@ -11,7 +11,12 @@ export class LabelerContext {
 
   constructor(config: LabelerConfig) {
     this.config = config;
-    this.server = new LabelerServer({ did: config.did, signingKey: config.signingKey });
+    const dbName = config.bskyHandle ? config.bskyHandle.split('.')[0] : config.did.replace(/:/g, '_');
+    this.server = new LabelerServer({
+      did: config.did,
+      signingKey: config.signingKey,
+      dbPath: `./db/${dbName}.db`,
+    });
 
     // Initialize mapping table for likes and labels
     this.server.db
