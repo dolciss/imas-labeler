@@ -37,6 +37,7 @@ export class LabelerContext {
   public registerCustomRoutes() {
     void this.server.app.register(async (instance) => {
       instance.get('/.well-known/did.json', (req, rep) => this.wellKnownDidHandler(req, rep));
+      instance.get('/.well-known/atproto-did', (req, rep) => this.wellKnownAtprotoDidHandler(req, rep));
       instance.get('/xrpc/app.bsky.feed.describeFeedGenerator', (req, rep) =>
         this.describeFeedGeneratorHandler(req, rep),
       );
@@ -148,6 +149,14 @@ export class LabelerContext {
       ],
     };
     return rep.header('Content-Type', 'application/json').send(didDocument);
+  }
+
+  private async wellKnownAtprotoDidHandler(req: FastifyRequest, rep: FastifyReply) {
+    if (!this.config.hostName?.endsWith(req.hostname)) {
+      void rep.status(404).send({ error: 'NotFound' });
+      return;
+    }
+    return rep.header('Content-Type', 'text/plain').send(this.config.did);
   }
 
   private async describeFeedGeneratorHandler(req: FastifyRequest, rep: FastifyReply) {
