@@ -112,7 +112,7 @@ for (const labeler of labelers) {
     if (error) {
       logger.error(`Error starting server for ${labeler.config.did}: %s`, error);
     } else {
-      logger.info(`Labeler server for ${labeler.config.did} listening on ${address}`);
+      logger.info(`Labeler server for ${labeler.config.did}(${labeler.config.bskyHandle}) listening on ${address}`);
     }
   });
 }
