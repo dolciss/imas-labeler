@@ -66,18 +66,21 @@ const labelRkeys: Record<string, string> = {};
 for (const labelName of labelNames) {
   //const labelPost = await post.reply({ text: labelName });
   const nowDate = new Date();
-  const labelPost = await bot.post({
-    text: labelName,
-    threadgate: { allowLists: [] },
-    createdAt: new Date(
-      POST_DATE.getFullYear(),
-      POST_DATE.getMonth(),
-      POST_DATE.getDate(),
-      nowDate.getHours(),
-      nowDate.getMinutes(),
-      nowDate.getSeconds(),
-    ),
-  });
+  const labelPost = await bot.post(
+    {
+      text: labelName,
+      threadgate: { allowLists: [] },
+      createdAt: new Date(
+        POST_DATE.getFullYear(),
+        POST_DATE.getMonth(),
+        POST_DATE.getDate(),
+        nowDate.getHours(),
+        nowDate.getMinutes(),
+        nowDate.getSeconds(),
+      ),
+    },
+    { resolveFacets: false },
+  );
   labelRkeys[labelName] = labelPost.uri.split('/').pop()!;
   await new Promise((resolve) => setTimeout(resolve, 5000));
 }
