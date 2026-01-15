@@ -7,7 +7,16 @@ import logger from './logger.js';
 
 const configs = getLabelerConfigs();
 
-for (const config of configs) {
+const targetHandle = process.argv[2];
+const filteredConfigs =
+  targetHandle ? configs.filter((c) => c.did === targetHandle || c.bskyHandle === targetHandle) : configs;
+
+if (filteredConfigs.length === 0) {
+  logger.error(`No configuration found for "${targetHandle}".`);
+  process.exit(1);
+}
+
+for (const config of filteredConfigs) {
   if (!config.bskyHandle || !config.bskyPassword) {
     logger.warn(`Skipping ${config.did}: Missing BlueSky identifier or password.`);
     continue;
