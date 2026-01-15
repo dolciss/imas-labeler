@@ -29,7 +29,7 @@ export const SIDEM_FEEDS: FeedDefinition[] = [
 
 export const SIDEM_LABELS: Label[] = [
   {
-    rkey: '3mchkkdme422c',
+    rkey: '3mchunkoms22c',
     identifier: 'unit-jupiter',
     locales: [
       { lang: 'ja', name: 'Jupiter', description: '互いを信頼する確かな絆で、だれより輝く！' },
@@ -39,7 +39,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['unit'],
   },
   {
-    rkey: '3mchkkijle22c',
+    rkey: '3mchunpjmqs2c',
     identifier: 'unit-dramaticstars',
     locales: [
       { lang: 'ja', name: 'DRAMATIC STARS', description: '強い想いの力で、まっすぐ飛び立つ！' },
@@ -49,7 +49,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['unit'],
   },
   {
-    rkey: '3mchkknglrc2c',
+    rkey: '3mchunuegu22c',
     identifier: 'unit-altessimo',
     locales: [
       { lang: 'ja', name: 'Altessimo', description: '美しき旋律を重ね合わせ、天へと響かせる！' },
@@ -59,7 +59,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['unit'],
   },
   {
-    rkey: '3mchkksbxh22c',
+    rkey: '3mchunz75zk2c',
     identifier: 'unit-beit',
     locales: [
       { lang: 'ja', name: 'Beit', description: 'ハッピースマイル♪皆に笑顔をお届けします♪' },
@@ -69,7 +69,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['unit'],
   },
   {
-    rkey: '3mchkkx67h22c',
+    rkey: '3mchuo623zs2c',
     identifier: 'unit-w',
     locales: [
       { lang: 'ja', name: 'W', description: '2人で一緒に勝利の”V”ictory！' },
@@ -79,7 +79,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['unit'],
   },
   {
-    rkey: '3mchkl3zuvc2c',
+    rkey: '3mchuocvlmk2c',
     identifier: 'unit-frame',
     locales: [
       { lang: 'ja', name: 'FRAME', description: '困った時は呼んでくれ！頼れる元公務員ユニット！' },
@@ -89,7 +89,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['unit'],
   },
   {
-    rkey: '3mchklawte22c',
+    rkey: '3mchuohrju22c',
     identifier: 'unit-sai',
     locales: [
       { lang: 'ja', name: '彩', description: '咲かせて魅せよう、大輪の華と大和心！' },
@@ -99,7 +99,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['unit'],
   },
   {
-    rkey: '3mchklfs62k2c',
+    rkey: '3mchuomobi22c',
     identifier: 'unit-highjoker',
     locales: [
       { lang: 'ja', name: 'High×Joker', description: '”イマ”を全力で楽しめ！青春盛り高校生バンド！' },
@@ -109,7 +109,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['unit'],
   },
   {
-    rkey: '3mchklknlos2c',
+    rkey: '3mchuorj2m22c',
     identifier: 'unit-shinsokuikkon',
     locales: [
       { lang: 'ja', name: '神速一魂', description: '魂燃やして、生命の限りアツく輝け！' },
@@ -119,7 +119,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['unit'],
   },
   {
-    rkey: '3mchklpkgak2c',
+    rkey: '3mchuowfpcc2c',
     identifier: 'unit-cafeparade',
     locales: [
       { lang: 'ja', name: 'Café Parade', description: 'Welcome♪美味しく楽しい時間を、召し上がれ！' },
@@ -129,7 +129,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['unit'],
   },
   {
-    rkey: '3mchklufuu22c',
+    rkey: '3mchup3bxcc2c',
     identifier: 'unit-mofumofuen',
     locales: [
       { lang: 'ja', name: 'もふもふえん', description: 'かわいい＆かっこいいが、いっぱいの世界へようこそ♪' },
@@ -139,7 +139,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['unit'],
   },
   {
-    rkey: '3mchklzbajs2c',
+    rkey: '3mchupa4imc2c',
     identifier: 'unit-sem',
     locales: [
       { lang: 'ja', name: 'S.E.M', description: '生徒を導く、アツい心の元教師ユニット！' },
@@ -149,7 +149,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['unit'],
   },
   {
-    rkey: '3mchkm64wxc2c',
+    rkey: '3mchupeyfuk2c',
     identifier: 'unit-thekogadou',
     locales: [
       { lang: 'ja', name: 'THE 虎牙道', description: 'その拳でテッペン目指せ！闘志を胸に突き進む！' },
@@ -159,7 +159,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['unit'],
   },
   {
-    rkey: '3mchkmcy2t22c',
+    rkey: '3mchupjukws2c',
     identifier: 'unit-flags',
     locales: [
       { lang: 'ja', name: 'F-LAGS', description: '新しい自分革命の旅へ！BON VOYAGE！' },
@@ -169,7 +169,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['unit'],
   },
   {
-    rkey: '3mchkmhuiok2c',
+    rkey: '3mchupophxs2c',
     identifier: 'unit-legenders',
     locales: [
       { lang: 'ja', name: 'Legenders', description: '彼らが紡ぐのは、イマを刻み記す唄！' },
@@ -179,7 +179,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['unit'],
   },
   {
-    rkey: '3mchkmmr2h22c',
+    rkey: '3mchuptln222c',
     identifier: 'unit-cfirst',
     locales: [
       { lang: 'ja', name: 'C.FIRST', description: '静かにアツく、剥き出しの心で世界を切り拓け！' },
@@ -189,7 +189,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['unit'],
   },
   {
-    rkey: '3mchkmrmjzs2c',
+    rkey: '3mchupyh4ms2c',
     identifier: 'idol-shota',
     locales: [
       { lang: 'ja', name: '御手洗翔太', description: '961プロダクションから、315プロダクション所属アイドルへ！' },
@@ -199,7 +199,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-mental'],
   },
   {
-    rkey: '3mchkmwiahc2c',
+    rkey: '3mchuq5d5s22c',
     identifier: 'idol-toma',
     locales: [
       { lang: 'ja', name: '天ヶ瀬冬馬', description: '961プロダクションから、315プロダクション所属アイドルへ！' },
@@ -209,7 +209,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-physical'],
   },
   {
-    rkey: '3mchkn3ftgc2c',
+    rkey: '3mchuqc6oe22c',
     identifier: 'idol-hokuto',
     locales: [
       { lang: 'ja', name: '伊集院北斗', description: '961プロダクションから、315プロダクション所属アイドルへ！' },
@@ -219,7 +219,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-intelli'],
   },
   {
-    rkey: '3mchknaanjk2c',
+    rkey: '3mchuqh27vc2c',
     identifier: 'idol-kaoru',
     locales: [
       { lang: 'ja', name: '桜庭薫', description: '外科医からアイドルへ！' },
@@ -229,7 +229,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-intelli'],
   },
   {
-    rkey: '3mchknf472s2c',
+    rkey: '3mchuqlwdyc2c',
     identifier: 'idol-teru',
     locales: [
       { lang: 'ja', name: '天道輝', description: '弁護士からアイドルへ！' },
@@ -239,7 +239,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-physical'],
   },
   {
-    rkey: '3mchknjywos2c',
+    rkey: '3mchuqqszns2c',
     identifier: 'idol-tsubasa',
     locales: [
       { lang: 'ja', name: '柏木翼', description: 'パイロットからアイドルへ！' },
@@ -249,7 +249,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-mental'],
   },
   {
-    rkey: '3mchknoubfc2c',
+    rkey: '3mchuqvpoe22c',
     identifier: 'idol-kei',
     locales: [
       { lang: 'ja', name: '都築圭', description: '作曲家からアイドルへ！' },
@@ -259,7 +259,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-mental'],
   },
   {
-    rkey: '3mchkntqckk2c',
+    rkey: '3mchur2kihc2c',
     identifier: 'idol-rei',
     locales: [
       { lang: 'ja', name: '神楽麗', description: 'ヴァイオリニストからアイドルへ！' },
@@ -269,7 +269,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-intelli'],
   },
   {
-    rkey: '3mchknyn4522c',
+    rkey: '3mchur7f7ms2c',
     identifier: 'idol-kyoji',
     locales: [
       { lang: 'ja', name: '鷹城恭二', description: 'コンビニアルバイトからアイドルへ！' },
@@ -279,7 +279,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-intelli'],
   },
   {
-    rkey: '3mchko5iyg22c',
+    rkey: '3mchureaaks2c',
     identifier: 'idol-pierre',
     locales: [
       { lang: 'ja', name: 'ピエール', description: '着ぐるみアルバイトからアイドルへ！' },
@@ -289,7 +289,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-mental'],
   },
   {
-    rkey: '3mchkocdtik2c',
+    rkey: '3mchurj3lbc2c',
     identifier: 'idol-minori',
     locales: [
       { lang: 'ja', name: '渡辺みのり', description: 'フラワーショップ店長からアイドルへ！' },
@@ -299,7 +299,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-physical'],
   },
   {
-    rkey: '3mchkoh7ezs2c',
+    rkey: '3mchurnyvh22c',
     identifier: 'idol-yusuke',
     locales: [
       { lang: 'ja', name: '蒼井悠介', description: 'サッカー選手からアイドルへ！' },
@@ -309,7 +309,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-mental'],
   },
   {
-    rkey: '3mchkom3i5k2c',
+    rkey: '3mchursvcdc2c',
     identifier: 'idol-kyosuke',
     locales: [
       { lang: 'ja', name: '蒼井享介', description: 'サッカー選手からアイドルへ！' },
@@ -319,7 +319,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-intelli'],
   },
   {
-    rkey: '3mchkoqz25c2c',
+    rkey: '3mchurxql3c2c',
     identifier: 'idol-ryu',
     locales: [
       { lang: 'ja', name: '木村龍', description: '消防士からアイドルへ！' },
@@ -329,7 +329,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-physical'],
   },
   {
-    rkey: '3mchkovukpc2c',
+    rkey: '3mchus4lh522c',
     identifier: 'idol-hideo',
     locales: [
       { lang: 'ja', name: '握野英雄', description: '警察官からアイドルへ！' },
@@ -339,7 +339,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-intelli'],
   },
   {
-    rkey: '3mchkp2qkvc2c',
+    rkey: '3mchusbge622c',
     identifier: 'idol-seiji',
     locales: [
       { lang: 'ja', name: '信玄誠司', description: '自衛官からアイドルへ！' },
@@ -349,7 +349,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-mental'],
   },
   {
-    rkey: '3mchkp7n5n22c',
+    rkey: '3mchusgdpd22c',
     identifier: 'idol-kuro',
     locales: [
       { lang: 'ja', name: '清澄九郎', description: '茶道家からアイドルへ！' },
@@ -359,7 +359,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-mental'],
   },
   {
-    rkey: '3mchkpejcpc2c',
+    rkey: '3mchusl7sgs2c',
     identifier: 'idol-kirio',
     locales: [
       { lang: 'ja', name: '猫柳キリオ', description: '落語家からアイドルへ！' },
@@ -369,7 +369,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-intelli'],
   },
   {
-    rkey: '3mchkpjhytc2c',
+    rkey: '3mchusq2vdc2c',
     identifier: 'idol-shoma',
     locales: [
       { lang: 'ja', name: '華村翔真', description: '歌舞伎役者からアイドルへ！' },
@@ -379,7 +379,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-mental'],
   },
   {
-    rkey: '3mchkpodckk2c',
+    rkey: '3mchusuyjbk2c',
     identifier: 'idol-jun',
     locales: [
       { lang: 'ja', name: '冬美旬', description: '軽音部（キーボード担当）からアイドルへ！' },
@@ -389,7 +389,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-intelli'],
   },
   {
-    rkey: '3mchkpt6ehs2c',
+    rkey: '3mchuszw6722c',
     identifier: 'idol-hayato',
     locales: [
       { lang: 'ja', name: '秋山隼人', description: '軽音部（ギター担当）からアイドルへ！' },
@@ -399,7 +399,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-physical'],
   },
   {
-    rkey: '3mchkpxzq5k2c',
+    rkey: '3mchut6s7ec2c',
     identifier: 'idol-shiki',
     locales: [
       { lang: 'ja', name: '伊瀬谷四季', description: '軽音部（ボーカル担当）からアイドルへ！' },
@@ -409,7 +409,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-physical'],
   },
   {
-    rkey: '3mchkq4up522c',
+    rkey: '3mchutdobis2c',
     identifier: 'idol-natsuki',
     locales: [
       { lang: 'ja', name: '榊夏来', description: '軽音部（ベース担当）からアイドルへ！' },
@@ -419,7 +419,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-intelli'],
   },
   {
-    rkey: '3mchkqbpah22c',
+    rkey: '3mchutillok2c',
     identifier: 'idol-haruna',
     locales: [
       { lang: 'ja', name: '若里春名', description: '軽音部（ドラム担当）からアイドルへ！' },
@@ -429,7 +429,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-mental'],
   },
   {
-    rkey: '3mchkqgk3jk2c',
+    rkey: '3mchutnhezs2c',
     identifier: 'idol-suzaku',
     locales: [
       { lang: 'ja', name: '紅井朱雀', description: '熱血ヤンキーからアイドルへ！' },
@@ -439,7 +439,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-physical'],
   },
   {
-    rkey: '3mchkqlf3ic2c',
+    rkey: '3mchutses5c2c',
     identifier: 'idol-genbu',
     locales: [
       { lang: 'ja', name: '黒野玄武', description: 'インテリヤンキーからアイドルへ！' },
@@ -449,7 +449,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-intelli'],
   },
   {
-    rkey: '3mchkqqasv22c',
+    rkey: '3mchutx7t3c2c',
     identifier: 'idol-makio',
     locales: [
       { lang: 'ja', name: '卯月巻緒', description: 'カフェ店員からアイドルへ！' },
@@ -459,7 +459,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-mental'],
   },
   {
-    rkey: '3mchkqv3tt22c',
+    rkey: '3mchuu42uyk2c',
     identifier: 'idol-yukihiro',
     locales: [
       { lang: 'ja', name: '神谷幸広', description: 'カフェオーナーからアイドルへ！' },
@@ -469,7 +469,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-mental'],
   },
   {
-    rkey: '3mchkqzwur22c',
+    rkey: '3mchuuawaoc2c',
     identifier: 'idol-asselin',
     locales: [
       { lang: 'ja', name: 'アスラン＝BBⅡ世', description: 'シェフからアイドルへ！' },
@@ -479,7 +479,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-physical'],
   },
   {
-    rkey: '3mchkr6rvp22c',
+    rkey: '3mchuufrv5c2c',
     identifier: 'idol-soichiro',
     locales: [
       { lang: 'ja', name: '東雲荘一郎', description: 'パティシエからアイドルへ！' },
@@ -489,7 +489,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-intelli'],
   },
   {
-    rkey: '3mchkrdmkw22c',
+    rkey: '3mchuukms6c2c',
     identifier: 'idol-saki',
     locales: [
       { lang: 'ja', name: '水嶋咲', description: 'カフェ店員からアイドルへ！' },
@@ -499,7 +499,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-physical'],
   },
   {
-    rkey: '3mchkrihlu22c',
+    rkey: '3mchuuphr5s2c',
     identifier: 'idol-shiro',
     locales: [
       { lang: 'ja', name: '橘志狼', description: '子役からアイドルへ！' },
@@ -509,7 +509,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-physical'],
   },
   {
-    rkey: '3mchkrneehc2c',
+    rkey: '3mchuuucges2c',
     identifier: 'idol-nao',
     locales: [
       { lang: 'ja', name: '岡村直央', description: '子役からアイドルへ！' },
@@ -519,7 +519,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-intelli'],
   },
   {
-    rkey: '3mchkrsapf22c',
+    rkey: '3mchuuz4znc2c',
     identifier: 'idol-kanon',
     locales: [
       { lang: 'ja', name: '姫野かのん', description: '子役からアイドルへ！' },
@@ -529,7 +529,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-mental'],
   },
   {
-    rkey: '3mchkrx5hyc2c',
+    rkey: '3mchuv5zjhc2c',
     identifier: 'idol-jiro',
     locales: [
       { lang: 'ja', name: '山下次郎', description: '化学教師からアイドルへ！' },
@@ -539,7 +539,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-intelli'],
   },
   {
-    rkey: '3mchks3zebc2c',
+    rkey: '3mchuvcuhhk2c',
     identifier: 'idol-rui',
     locales: [
       { lang: 'ja', name: '舞田類', description: '英語教師からアイドルへ！' },
@@ -549,7 +549,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-mental'],
   },
   {
-    rkey: '3mchksavmbc2c',
+    rkey: '3mchuvhpldc2c',
     identifier: 'idol-michio',
     locales: [
       { lang: 'ja', name: '硲道夫', description: '数学教師からアイドルへ！' },
@@ -559,7 +559,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-intelli'],
   },
   {
-    rkey: '3mchksfsaxk2c',
+    rkey: '3mchuvmmujs2c',
     identifier: 'idol-michiru',
     locales: [
       { lang: 'ja', name: '円城寺道流', description: 'ラーメン屋店主からアイドルへ！' },
@@ -569,7 +569,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-physical'],
   },
   {
-    rkey: '3mchkskmua22c',
+    rkey: '3mchuvrj5j22c',
     identifier: 'idol-takeru',
     locales: [
       { lang: 'ja', name: '大河タケル', description: 'プロボクサーからアイドルへ！' },
@@ -579,7 +579,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-physical'],
   },
   {
-    rkey: '3mchkspishk2c',
+    rkey: '3mchuvwehac2c',
     identifier: 'idol-ren',
     locales: [
       { lang: 'ja', name: '牙崎漣', description: '拳法家からアイドルへ！' },
@@ -589,7 +589,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-physical'],
   },
   {
-    rkey: '3mchksudmks2c',
+    rkey: '3mchuw3jta22c',
     identifier: 'idol-kazuki',
     locales: [
       { lang: 'ja', name: '九十九一希', description: '小説家からアイドルへ！' },
@@ -599,7 +599,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-intelli'],
   },
   {
-    rkey: '3mchksz72722c',
+    rkey: '3mchuwaez2c2c',
     identifier: 'idol-ryo',
     locales: [
       { lang: 'ja', name: '秋月涼', description: '女性アイドルから男性アイドルへ！' },
@@ -609,7 +609,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-mental'],
   },
   {
-    rkey: '3mchkt63e5k2c',
+    rkey: '3mchuwfc3g22c',
     identifier: 'idol-daigo',
     locales: [
       { lang: 'ja', name: '兜大吾', description: '六代目からアイドルへ！' },
@@ -619,7 +619,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-physical'],
   },
   {
-    rkey: '3mchktcwptc2c',
+    rkey: '3mchuwk4zgc2c',
     identifier: 'idol-amehiko',
     locales: [
       { lang: 'ja', name: '葛之葉雨彦', description: '清掃員からアイドルへ！' },
@@ -629,7 +629,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-intelli'],
   },
   {
-    rkey: '3mchkthsha22c',
+    rkey: '3mchuwozwvs2c',
     identifier: 'idol-sora',
     locales: [
       { lang: 'ja', name: '北村想楽', description: '雑貨屋店員からアイドルへ！' },
@@ -639,7 +639,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-mental'],
   },
   {
-    rkey: '3mchktmnpy22c',
+    rkey: '3mchuwtun422c',
     identifier: 'idol-chris',
     locales: [
       { lang: 'ja', name: '古論クリス', description: '海洋学者（助教）からアイドルへ！' },
@@ -649,7 +649,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-intelli'],
   },
   {
-    rkey: '3mchktrig6c2c',
+    rkey: '3mchuwyqghc2c',
     identifier: 'idol-momohito',
     locales: [
       { lang: 'ja', name: '花園百々人', description: '生徒会長からアイドルへ！' },
@@ -659,7 +659,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-mental'],
   },
   {
-    rkey: '3mchktweuz22c',
+    rkey: '3mchux5lbjs2c',
     identifier: 'idol-shu',
     locales: [
       { lang: 'ja', name: '天峰秀', description: '生徒会長からアイドルへ！' },
@@ -669,7 +669,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-intelli'],
   },
   {
-    rkey: '3mchku3b23c2c',
+    rkey: '3mchuxcfzok2c',
     identifier: 'idol-eishin',
     locales: [
       { lang: 'ja', name: '眉見鋭心', description: '生徒会長からアイドルへ！' },
@@ -679,7 +679,7 @@ export const SIDEM_LABELS: Label[] = [
     feedShortNames: ['idol-physical'],
   },
   {
-    rkey: '3mchkua6bdc2c',
+    rkey: '3mchuxhbhcs2c',
     identifier: 'staff-ken',
     locales: [
       { lang: 'ja', name: '山村賢', description: '' },
@@ -688,7 +688,7 @@ export const SIDEM_LABELS: Label[] = [
     targetHandle: 'sidem-labeler.endless.dance',
   },
   {
-    rkey: '3mchkueymrs2c',
+    rkey: '3mchuxm4hbk2c',
     identifier: 'staff-takashi',
     locales: [
       { lang: 'ja', name: '齋藤孝司', description: '' },
