@@ -184,3 +184,14 @@ export function getLabelsForHandle(handle: string | undefined): Label[] {
     return true;
   });
 }
+
+export function getFeedShortNamesForHandle(handle: string | undefined): string[] {
+  const labels = getLabelsForHandle(handle);
+  const shortNames = labels.flatMap((label) => label.feedShortNames ?? []);
+  return [...new Set(shortNames)];
+}
+
+export function getLabelsByFeedShortName(handle: string | undefined, shortName: string): Label[] {
+  const labels = getLabelsForHandle(handle);
+  return labels.filter((label) => label.feedShortNames?.includes(shortName));
+}

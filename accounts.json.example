@@ -4,6 +4,7 @@
     "signingKey": "signingKey1",
     "host": "127.0.0.1",
     "port": 4100,
+    "hostName": "feed1.example.com",
     "bskyHandle": "handle1.bsky.social",
     "bskyPassword": "password1"
   },
@@ -12,6 +13,7 @@
     "signingKey": "signingKey2",
     "host": "127.0.0.1",
     "port": 4102,
+    "hostName": "feed2.example.com",
     "bskyHandle": "handle2.bsky.social",
     "bskyPassword": "password2"
   }

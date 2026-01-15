@@ -5,6 +5,7 @@ export interface Label {
   identifier: string;
   locales: LabelValueDefinitionStrings[];
   targetHandle?: string;
+  feedShortNames?: string[];
 }
 
 export interface LabelerConfig {
@@ -12,6 +13,7 @@ export interface LabelerConfig {
   signingKey: string;
   host?: string;
   port?: number;
+  hostName?: string;
   bskyHandle?: string;
   bskyPassword?: string;
 }

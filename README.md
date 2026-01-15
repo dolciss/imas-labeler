@@ -25,16 +25,20 @@ Copy `accounts.json.example` to `accounts.json` and fill in the details for each
   {
     "did": "did:plc:xxx",
     "signingKey": "xxx",
+    "host": "127.0.0.1",
+    "port": 4100,
+    "hostName": "feed1.example.com",
     "bskyHandle": "labeler1.bsky.social",
-    "bskyPassword": "xxx",
-    "port": 4100
+    "bskyPassword": "xxx"
   },
   {
     "did": "did:plc:yyy",
     "signingKey": "yyy",
+    "host": "127.0.0.1",
+    "port": 4102,
+    "hostName": "feed2.example.com",
     "bskyHandle": "labeler2.bsky.social",
-    "bskyPassword": "yyy",
-    "port": 4102
+    "bskyPassword": "yyy"
   }
 ]
 ```

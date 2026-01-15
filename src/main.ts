@@ -108,13 +108,19 @@ for (const labeler of labelers) {
   const port = labeler.config.port ?? 4100;
   const host = labeler.config.host ?? '127.0.0.1';
 
-  labeler.server.app.listen({ port, host }, (error, address) => {
-    if (error) {
-      logger.error(`Error starting server for ${labeler.config.did}: %s`, error);
-    } else {
-      logger.info(`Labeler server for ${labeler.config.did}(${labeler.config.bskyHandle}) listening on ${address}`);
-    }
-  });
+  // Register custom routes before listening
+  labeler.registerCustomRoutes();
+
+  logger.info(`[${labeler.config.did}] Waiting for internal initialization...`);
+  setTimeout(() => {
+    labeler.server.app.listen({ port, host }, (error, address) => {
+      if (error) {
+        logger.error(`[${labeler.config.did}] Error starting server: ${error}`);
+      } else {
+        logger.info(`Labeler server for ${labeler.config.did} (${labeler.config.bskyHandle}) listening on ${address}`);
+      }
+    });
+  }, 3000);
 }
 
 jetstream.start();
