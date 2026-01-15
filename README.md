@@ -53,6 +53,7 @@ Copy the `.env.example` file to `.env`. This file contains global settings share
 PDS_URL=https://bsky.social
 DEFAULT_LANGUAGE=en
 POST_DATE=2026-01-01
+METRICS_HOST=127.0.0.1
 METRICS_PORT=4101
 FIREHOSE_URL=wss://jetstream.atproto.tools/subscribe
 CURSOR_UPDATE_INTERVAL=10000
@@ -104,12 +105,11 @@ The script will output `rkey` values for the label posts and the "delete" post.
 **Copy and paste these rkeys back into `src/constants.ts`:**
 
 - Update `rkey` in `LABELS` array for the corresponding labels.
-- Add the delete post configuration to the `DELETE` array as instructed by the script output.
 
-Finally, run `bun set-labels` to register the label definitions on the network for all configured accounts:
+Finally, run `bun set-labels <handle>` to register the label definitions on the network for all configured accounts:
 
 ```bash
-bun set-labels
+bun set-labels labeler1.bsky.social
 ```
 
 Alternatively, create the posts by hand, edit `src/constants.ts` and use `bunx @skyware/labeler label add` to add the labels.
