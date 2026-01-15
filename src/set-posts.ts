@@ -31,7 +31,7 @@ try {
   console.error('Error logging in: ', error);
   process.exit(1);
 }
-
+/*
 process.stdout.write('WARNING: This will delete all posts in your profile. Are you sure you want to continue? (y/n) ');
 
 const answer = await new Promise((resolve) => {
@@ -50,7 +50,7 @@ if (answer === 'y') {
   console.log('Operation cancelled.');
   process.exit(0);
 }
-
+*/
 /*
 const post = await bot.post({
   text: 'Like the replies to this post to receive labels.',
@@ -58,9 +58,10 @@ const post = await bot.post({
 });
 */
 
-const labelNames = getLabelsForHandle(targetConfig.bskyHandle).map((label) =>
-  label.locales.map((locale) => locale.name).join(' | '),
-);
+const labelNames = getLabelsForHandle(targetConfig.bskyHandle).map((label) => {
+  const defaultLocale = label.locales.find((locale) => locale.lang === DEFAULT_LANGUAGE);
+  return defaultLocale ? defaultLocale.name : label.locales.map((locale) => locale.name).join(' | ');
+});
 const labelRkeys: Record<string, string> = {};
 for (const labelName of labelNames) {
   //const labelPost = await post.reply({ text: labelName });
