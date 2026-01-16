@@ -1,9 +1,12 @@
-import { GKMAS_LABELS } from './labels/gkmas.js';
+import { IMAS_LABELS } from './labels/imas.js';
+import { IMASCG_LABELS, IMASCG_FEEDS } from './labels/imascg.js';
+import { IMASML_LABELS, IMASML_FEEDS } from './labels/imasml.js';
 import { SIDEM_LABELS, SIDEM_FEEDS } from './labels/sidem.js';
+import { GKMAS_LABELS } from './labels/gkmas.js';
 import { Label, FeedDefinition } from './types.js';
 
-export const LABELS: Label[] = [...SIDEM_LABELS, ...GKMAS_LABELS];
-export const FEEDS: FeedDefinition[] = [...SIDEM_FEEDS];
+export const LABELS: Label[] = [...IMAS_LABELS, ...IMASCG_LABELS, ...IMASML_LABELS, ...SIDEM_LABELS, ...GKMAS_LABELS];
+export const FEEDS: FeedDefinition[] = [...IMASCG_FEEDS, ...IMASML_FEEDS, ...SIDEM_FEEDS];
 
 export function getLabelsForHandle(handle: string | undefined): Label[] {
   return LABELS.filter((label) => {
