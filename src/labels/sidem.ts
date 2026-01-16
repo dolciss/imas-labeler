@@ -1,29 +1,31 @@
 import { FeedDefinition, Label } from '../types.js';
 
+const TARGET_HANDLE = 'sidem-labeler.endless.dance';
+
 export const SIDEM_FEEDS: FeedDefinition[] = [
   {
     shortName: 'unit',
     displayName: 'SideM ユニット',
     description: 'ユニットの一覧です',
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
   {
     shortName: 'idol-mental',
     displayName: 'SideM メンタル',
     description: 'SideM メンタル属性のアイドル一覧です',
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
   {
     shortName: 'idol-physical',
     displayName: 'SideM フィジカル',
     description: 'SideM フィジカル属性のアイドル一覧です',
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
   {
     shortName: 'idol-intelli',
     displayName: 'SideM インテリ',
     description: 'SideM インテリ属性のアイドル一覧です',
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
 ];
 
@@ -35,7 +37,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: 'Jupiter', description: '互いを信頼する確かな絆で、だれより輝く！' },
       { lang: 'en', name: 'Jupiter', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['unit'],
   },
   {
@@ -45,7 +47,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: 'DRAMATIC STARS', description: '強い想いの力で、まっすぐ飛び立つ！' },
       { lang: 'en', name: 'DRAMATIC STARS', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['unit'],
   },
   {
@@ -55,7 +57,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: 'Altessimo', description: '美しき旋律を重ね合わせ、天へと響かせる！' },
       { lang: 'en', name: 'Altessimo', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['unit'],
   },
   {
@@ -65,7 +67,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: 'Beit', description: 'ハッピースマイル♪皆に笑顔をお届けします♪' },
       { lang: 'en', name: 'Beit', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['unit'],
   },
   {
@@ -75,7 +77,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: 'W', description: '2人で一緒に勝利の”V”ictory！' },
       { lang: 'en', name: 'W', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['unit'],
   },
   {
@@ -85,7 +87,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: 'FRAME', description: '困った時は呼んでくれ！頼れる元公務員ユニット！' },
       { lang: 'en', name: 'FRAME', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['unit'],
   },
   {
@@ -95,7 +97,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '彩', description: '咲かせて魅せよう、大輪の華と大和心！' },
       { lang: 'en', name: 'Sai', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['unit'],
   },
   {
@@ -105,7 +107,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: 'High×Joker', description: '”イマ”を全力で楽しめ！青春盛り高校生バンド！' },
       { lang: 'en', name: 'High×Joker', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['unit'],
   },
   {
@@ -115,7 +117,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '神速一魂', description: '魂燃やして、生命の限りアツく輝け！' },
       { lang: 'en', name: 'Shinsoku Ikkon', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['unit'],
   },
   {
@@ -125,7 +127,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: 'Café Parade', description: 'Welcome♪美味しく楽しい時間を、召し上がれ！' },
       { lang: 'en', name: 'Café Parade', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['unit'],
   },
   {
@@ -135,7 +137,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: 'もふもふえん', description: 'かわいい＆かっこいいが、いっぱいの世界へようこそ♪' },
       { lang: 'en', name: 'Mofumofuen', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['unit'],
   },
   {
@@ -145,7 +147,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: 'S.E.M', description: '生徒を導く、アツい心の元教師ユニット！' },
       { lang: 'en', name: 'S.E.M', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['unit'],
   },
   {
@@ -155,7 +157,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: 'THE 虎牙道', description: 'その拳でテッペン目指せ！闘志を胸に突き進む！' },
       { lang: 'en', name: 'THE Kogadou', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['unit'],
   },
   {
@@ -165,7 +167,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: 'F-LAGS', description: '新しい自分革命の旅へ！BON VOYAGE！' },
       { lang: 'en', name: 'F-LAGS', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['unit'],
   },
   {
@@ -175,7 +177,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: 'Legenders', description: '彼らが紡ぐのは、イマを刻み記す唄！' },
       { lang: 'en', name: 'Legenders', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['unit'],
   },
   {
@@ -185,7 +187,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: 'C.FIRST', description: '静かにアツく、剥き出しの心で世界を切り拓け！' },
       { lang: 'en', name: 'C.FIRST', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['unit'],
   },
   {
@@ -195,7 +197,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '御手洗翔太', description: '961プロダクションから、315プロダクション所属アイドルへ！' },
       { lang: 'en', name: 'Shota Mitarai', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-mental'],
   },
   {
@@ -205,7 +207,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '天ヶ瀬冬馬', description: '961プロダクションから、315プロダクション所属アイドルへ！' },
       { lang: 'en', name: 'Toma Amagase', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-physical'],
   },
   {
@@ -215,7 +217,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '伊集院北斗', description: '961プロダクションから、315プロダクション所属アイドルへ！' },
       { lang: 'en', name: 'Hokuto Ijuin', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-intelli'],
   },
   {
@@ -225,7 +227,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '桜庭薫', description: '外科医からアイドルへ！' },
       { lang: 'en', name: 'Kaoru Sakuraba', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-intelli'],
   },
   {
@@ -235,7 +237,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '天道輝', description: '弁護士からアイドルへ！' },
       { lang: 'en', name: 'Teru Tendo', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-physical'],
   },
   {
@@ -245,7 +247,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '柏木翼', description: 'パイロットからアイドルへ！' },
       { lang: 'en', name: 'Tsubasa Kashiwagi', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-mental'],
   },
   {
@@ -255,7 +257,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '都築圭', description: '作曲家からアイドルへ！' },
       { lang: 'en', name: 'Kei Tsuzuki', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-mental'],
   },
   {
@@ -265,7 +267,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '神楽麗', description: 'ヴァイオリニストからアイドルへ！' },
       { lang: 'en', name: 'Rei Kagura', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-intelli'],
   },
   {
@@ -275,7 +277,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '鷹城恭二', description: 'コンビニアルバイトからアイドルへ！' },
       { lang: 'en', name: 'Kyoji Takajo', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-intelli'],
   },
   {
@@ -285,7 +287,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: 'ピエール', description: '着ぐるみアルバイトからアイドルへ！' },
       { lang: 'en', name: 'Pierre', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-mental'],
   },
   {
@@ -295,7 +297,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '渡辺みのり', description: 'フラワーショップ店長からアイドルへ！' },
       { lang: 'en', name: 'Minori Watanabe', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-physical'],
   },
   {
@@ -305,7 +307,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '蒼井悠介', description: 'サッカー選手からアイドルへ！' },
       { lang: 'en', name: 'Yusuke Aoi', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-mental'],
   },
   {
@@ -315,7 +317,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '蒼井享介', description: 'サッカー選手からアイドルへ！' },
       { lang: 'en', name: 'Kyosuke Aoi', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-intelli'],
   },
   {
@@ -325,7 +327,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '木村龍', description: '消防士からアイドルへ！' },
       { lang: 'en', name: 'Ryu Kimura', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-physical'],
   },
   {
@@ -335,7 +337,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '握野英雄', description: '警察官からアイドルへ！' },
       { lang: 'en', name: 'Hideo Akuno', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-intelli'],
   },
   {
@@ -345,7 +347,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '信玄誠司', description: '自衛官からアイドルへ！' },
       { lang: 'en', name: 'Seiji Shingen', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-mental'],
   },
   {
@@ -355,7 +357,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '清澄九郎', description: '茶道家からアイドルへ！' },
       { lang: 'en', name: 'Kuro Kiyosumi', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-mental'],
   },
   {
@@ -365,7 +367,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '猫柳キリオ', description: '落語家からアイドルへ！' },
       { lang: 'en', name: 'Kirio Nekoyanagi', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-intelli'],
   },
   {
@@ -375,7 +377,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '華村翔真', description: '歌舞伎役者からアイドルへ！' },
       { lang: 'en', name: 'Shoma Hanamura', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-mental'],
   },
   {
@@ -385,7 +387,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '冬美旬', description: '軽音部（キーボード担当）からアイドルへ！' },
       { lang: 'en', name: 'Jun Fuyumi', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-intelli'],
   },
   {
@@ -395,7 +397,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '秋山隼人', description: '軽音部（ギター担当）からアイドルへ！' },
       { lang: 'en', name: 'Hayato Akiyama', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-physical'],
   },
   {
@@ -405,7 +407,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '伊瀬谷四季', description: '軽音部（ボーカル担当）からアイドルへ！' },
       { lang: 'en', name: 'Shiki Iseya', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-physical'],
   },
   {
@@ -415,7 +417,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '榊夏来', description: '軽音部（ベース担当）からアイドルへ！' },
       { lang: 'en', name: 'Natsuki Sakaki', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-intelli'],
   },
   {
@@ -425,7 +427,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '若里春名', description: '軽音部（ドラム担当）からアイドルへ！' },
       { lang: 'en', name: 'Haruna Wakazato', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-mental'],
   },
   {
@@ -435,7 +437,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '紅井朱雀', description: '熱血ヤンキーからアイドルへ！' },
       { lang: 'en', name: 'Suzaku Akai', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-physical'],
   },
   {
@@ -445,7 +447,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '黒野玄武', description: 'インテリヤンキーからアイドルへ！' },
       { lang: 'en', name: 'Genbu Kurono', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-intelli'],
   },
   {
@@ -455,7 +457,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '卯月巻緒', description: 'カフェ店員からアイドルへ！' },
       { lang: 'en', name: 'Makio Uzuki', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-mental'],
   },
   {
@@ -465,7 +467,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '神谷幸広', description: 'カフェオーナーからアイドルへ！' },
       { lang: 'en', name: 'Yukihiro Kamiya', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-mental'],
   },
   {
@@ -475,7 +477,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: 'アスラン＝BBⅡ世', description: 'シェフからアイドルへ！' },
       { lang: 'en', name: 'Asselin = Beelzebuth II', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-physical'],
   },
   {
@@ -485,7 +487,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '東雲荘一郎', description: 'パティシエからアイドルへ！' },
       { lang: 'en', name: 'Soichiro Shinonome', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-intelli'],
   },
   {
@@ -495,7 +497,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '水嶋咲', description: 'カフェ店員からアイドルへ！' },
       { lang: 'en', name: 'Saki Mizushima', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-physical'],
   },
   {
@@ -505,7 +507,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '橘志狼', description: '子役からアイドルへ！' },
       { lang: 'en', name: 'Shiro Tachibana', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-physical'],
   },
   {
@@ -515,7 +517,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '岡村直央', description: '子役からアイドルへ！' },
       { lang: 'en', name: 'Nao Okamura', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-intelli'],
   },
   {
@@ -525,7 +527,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '姫野かのん', description: '子役からアイドルへ！' },
       { lang: 'en', name: 'Kanon Himeno', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-mental'],
   },
   {
@@ -535,7 +537,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '山下次郎', description: '化学教師からアイドルへ！' },
       { lang: 'en', name: 'Jiro Yamashita', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-intelli'],
   },
   {
@@ -545,7 +547,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '舞田類', description: '英語教師からアイドルへ！' },
       { lang: 'en', name: 'Rui Maita', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-mental'],
   },
   {
@@ -555,7 +557,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '硲道夫', description: '数学教師からアイドルへ！' },
       { lang: 'en', name: 'Michio Hazama', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-intelli'],
   },
   {
@@ -565,7 +567,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '円城寺道流', description: 'ラーメン屋店主からアイドルへ！' },
       { lang: 'en', name: 'Michiru Enjoji', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-physical'],
   },
   {
@@ -575,7 +577,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '大河タケル', description: 'プロボクサーからアイドルへ！' },
       { lang: 'en', name: 'Takeru Taiga', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-physical'],
   },
   {
@@ -585,7 +587,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '牙崎漣', description: '拳法家からアイドルへ！' },
       { lang: 'en', name: 'Ren Kizaki', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-physical'],
   },
   {
@@ -595,7 +597,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '九十九一希', description: '小説家からアイドルへ！' },
       { lang: 'en', name: 'Kazuki Tsukumo', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-intelli'],
   },
   {
@@ -605,7 +607,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '秋月涼', description: '女性アイドルから男性アイドルへ！' },
       { lang: 'en', name: 'Ryo Akizuki', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-mental'],
   },
   {
@@ -615,7 +617,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '兜大吾', description: '六代目からアイドルへ！' },
       { lang: 'en', name: 'Daigo Kabuto', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-physical'],
   },
   {
@@ -625,7 +627,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '葛之葉雨彦', description: '清掃員からアイドルへ！' },
       { lang: 'en', name: 'Amehiko Kuzunoha', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-intelli'],
   },
   {
@@ -635,7 +637,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '北村想楽', description: '雑貨屋店員からアイドルへ！' },
       { lang: 'en', name: 'Sora Kitamura', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-mental'],
   },
   {
@@ -645,7 +647,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '古論クリス', description: '海洋学者（助教）からアイドルへ！' },
       { lang: 'en', name: 'Chris Koron', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-intelli'],
   },
   {
@@ -655,7 +657,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '花園百々人', description: '生徒会長からアイドルへ！' },
       { lang: 'en', name: 'Momohito Hanazono', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-mental'],
   },
   {
@@ -665,7 +667,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '天峰秀', description: '生徒会長からアイドルへ！' },
       { lang: 'en', name: 'Shu Amamine', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-intelli'],
   },
   {
@@ -675,7 +677,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '眉見鋭心', description: '生徒会長からアイドルへ！' },
       { lang: 'en', name: 'Eishin Mayumi', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
     feedShortNames: ['idol-physical'],
   },
   {
@@ -685,7 +687,7 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '山村賢', description: '' },
       { lang: 'en', name: 'Ken Yamamura', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
   {
     rkey: '3mchuxm4hbk2c',
@@ -694,6 +696,6 @@ export const SIDEM_LABELS: Label[] = [
       { lang: 'ja', name: '齋藤孝司', description: '' },
       { lang: 'en', name: 'Takashi Saito', description: '' },
     ],
-    targetHandle: 'sidem-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
 ];

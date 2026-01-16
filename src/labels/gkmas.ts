@@ -1,5 +1,7 @@
 import { Label } from '../types.js';
 
+const TARGET_HANDLE = 'gkmas-labeler.endless.dance';
+
 export const GKMAS_LABELS: Label[] = [
   {
     rkey: '3mcf5lh3tis2c',
@@ -13,7 +15,7 @@ export const GKMAS_LABELS: Label[] = [
       },
       { lang: 'en', name: 'Saki Hanami', description: '' },
     ],
-    targetHandle: 'gkmas-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
   {
     rkey: '3mcf5llx67c2c',
@@ -27,7 +29,7 @@ export const GKMAS_LABELS: Label[] = [
       },
       { lang: 'en', name: 'Temari Tsukimura', description: '' },
     ],
-    targetHandle: 'gkmas-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
   {
     rkey: '3mcf5lqs75c2c',
@@ -41,7 +43,7 @@ export const GKMAS_LABELS: Label[] = [
       },
       { lang: 'en', name: 'Kotone Fujita', description: '' },
     ],
-    targetHandle: 'gkmas-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
   {
     rkey: '3mcf5lvnlsc2c',
@@ -55,7 +57,7 @@ export const GKMAS_LABELS: Label[] = [
       },
       { lang: 'en', name: 'Mao Arimura', description: '' },
     ],
-    targetHandle: 'gkmas-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
   {
     rkey: '3mcf5m2ifvk2c',
@@ -69,7 +71,7 @@ export const GKMAS_LABELS: Label[] = [
       },
       { lang: 'en', name: 'Lilja Katsuragi', description: '' },
     ],
-    targetHandle: 'gkmas-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
   {
     rkey: '3mcf5m7dbxc2c',
@@ -83,7 +85,7 @@ export const GKMAS_LABELS: Label[] = [
       },
       { lang: 'en', name: 'China Kuramoto', description: '' },
     ],
-    targetHandle: 'gkmas-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
   {
     rkey: '3mcf5me6mns2c',
@@ -97,7 +99,7 @@ export const GKMAS_LABELS: Label[] = [
       },
       { lang: 'en', name: 'Sumika Shiun', description: '' },
     ],
-    targetHandle: 'gkmas-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
   {
     rkey: '3mcf5mj26722c',
@@ -111,7 +113,7 @@ export const GKMAS_LABELS: Label[] = [
       },
       { lang: 'en', name: 'Hiro Shinosawa', description: '' },
     ],
-    targetHandle: 'gkmas-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
   {
     rkey: '3mcf5mnvivk2c',
@@ -125,7 +127,7 @@ export const GKMAS_LABELS: Label[] = [
       },
       { lang: 'en', name: 'Rinami Himesaki', description: '' },
     ],
-    targetHandle: 'gkmas-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
   {
     rkey: '3mcf5msr2gs2c',
@@ -139,7 +141,7 @@ export const GKMAS_LABELS: Label[] = [
       },
       { lang: 'en', name: 'Ume Hanami', description: '' },
     ],
-    targetHandle: 'gkmas-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
   {
     rkey: '3mcf5mxmf5c2c',
@@ -153,7 +155,7 @@ export const GKMAS_LABELS: Label[] = [
       },
       { lang: 'en', name: 'Misuzu Hataya', description: '' },
     ],
-    targetHandle: 'gkmas-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
   {
     rkey: '3mcf5n4hiz22c',
@@ -167,7 +169,7 @@ export const GKMAS_LABELS: Label[] = [
       },
       { lang: 'en', name: 'Sena Juo', description: '' },
     ],
-    targetHandle: 'gkmas-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
   {
     rkey: '3mcf5nbcotc2c',
@@ -181,7 +183,7 @@ export const GKMAS_LABELS: Label[] = [
       },
       { lang: 'en', name: 'Tsubame Amaya', description: '' },
     ],
-    targetHandle: 'gkmas-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
   {
     rkey: '3mcf5ng5unk2c',
@@ -195,7 +197,7 @@ export const GKMAS_LABELS: Label[] = [
       },
       { lang: 'en', name: 'Rinha Kaya', description: '' },
     ],
-    targetHandle: 'gkmas-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
   {
     rkey: '3mcf5nkyoqs2c',
@@ -209,7 +211,7 @@ export const GKMAS_LABELS: Label[] = [
       },
       { lang: 'en', name: 'Nadeshiko Aoi', description: '' },
     ],
-    targetHandle: 'gkmas-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
   {
     rkey: '3mcf5nputt22c',
@@ -223,7 +225,7 @@ export const GKMAS_LABELS: Label[] = [
       },
       { lang: 'en', name: 'Shion Shirakusa', description: '' },
     ],
-    targetHandle: 'gkmas-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
   {
     rkey: '3mcf5nury5c2c',
@@ -237,7 +239,7 @@ export const GKMAS_LABELS: Label[] = [
       },
       { lang: 'en', name: 'Gekka Shirakusa', description: '' },
     ],
-    targetHandle: 'gkmas-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
   {
     rkey: '3mcf5nzo57k2c',
@@ -246,7 +248,7 @@ export const GKMAS_LABELS: Label[] = [
       { lang: 'ja', name: '十王邦夫', description: '初星学園学園長' },
       { lang: 'en', name: 'Kunio Juo', description: '' },
     ],
-    targetHandle: 'gkmas-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
   {
     rkey: '3mcf5o6ja422c',
@@ -255,7 +257,7 @@ export const GKMAS_LABELS: Label[] = [
       { lang: 'ja', name: '根緒亜紗里', description: 'きさくで優しい担任の先生' },
       { lang: 'en', name: 'Asari Neo', description: '' },
     ],
-    targetHandle: 'gkmas-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
   {
     rkey: '3mcgnlc4dh22c',
@@ -269,7 +271,7 @@ export const GKMAS_LABELS: Label[] = [
       },
       { lang: 'en', name: 'Re;IRIS', description: '' },
     ],
-    targetHandle: 'gkmas-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
   {
     rkey: '3mcgnlgxwws2c',
@@ -282,7 +284,7 @@ export const GKMAS_LABELS: Label[] = [
       },
       { lang: 'en', name: 'Begrazia', description: '' },
     ],
-    targetHandle: 'gkmas-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
   {
     rkey: '3mcgnllsrzc2c',
@@ -295,7 +297,7 @@ export const GKMAS_LABELS: Label[] = [
       },
       { lang: 'en', name: 'SyngUp!', description: '' },
     ],
-    targetHandle: 'gkmas-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
   {
     rkey: '3mcgnlqo4ps2c',
@@ -308,6 +310,6 @@ export const GKMAS_LABELS: Label[] = [
       },
       { lang: 'en', name: 'Yumepathy', description: '' },
     ],
-    targetHandle: 'gkmas-labeler.endless.dance',
+    targetHandle: TARGET_HANDLE,
   },
 ];
