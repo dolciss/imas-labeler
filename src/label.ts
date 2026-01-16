@@ -84,7 +84,7 @@ export class LabelerContext {
       labelOperationsTotal.inc({
         action: 'add',
         status: 'success',
-        labeler_did: this.config.did,
+        handle: this.config.bskyHandle,
         identifier: newLabel.identifier,
       });
     } catch (error) {
@@ -92,7 +92,7 @@ export class LabelerContext {
       labelOperationsTotal.inc({
         action: 'add',
         status: 'failure',
-        labeler_did: this.config.did,
+        handle: this.config.bskyHandle,
         identifier: newLabel.identifier,
       });
     }
@@ -118,7 +118,7 @@ export class LabelerContext {
       labelOperationsTotal.inc({
         action: 'remove',
         status: 'success',
-        labeler_did: this.config.did,
+        handle: this.config.bskyHandle,
         identifier: mapping.identifier,
       });
     } catch (error) {
@@ -126,7 +126,7 @@ export class LabelerContext {
       labelOperationsTotal.inc({
         action: 'remove',
         status: 'failure',
-        labeler_did: this.config.did,
+        handle: this.config.bskyHandle,
         identifier: mapping.identifier,
       });
     }

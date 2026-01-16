@@ -9,7 +9,7 @@ collectDefaultMetrics({ register });
 export const labelOperationsTotal = new Counter({
   name: 'imas_labeler_ops_total',
   help: 'Total number of labeling operations',
-  labelNames: ['action', 'status', 'labeler_did', 'identifier'],
+  labelNames: ['action', 'status', 'handle', 'identifier'],
 });
 register.registerMetric(labelOperationsTotal);
 
