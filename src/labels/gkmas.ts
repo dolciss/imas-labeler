@@ -312,4 +312,17 @@ export const GKMAS_LABELS: Label[] = [
     ],
     targetHandle: TARGET_HANDLE,
   },
+  {
+    rkey: '3mhpumi47os2o',
+    identifier: 'unit-reversi',
+    locales: [
+      {
+        lang: 'ja',
+        name: 'REVERSI',
+        description: '初星学園アイドル科に所属する紫雲清夏、葛城リーリヤの2人で結成されたユニット。',
+      },
+      { lang: 'en', name: 'REVERSI', description: '' },
+    ],
+    targetHandle: TARGET_HANDLE,
+  },
 ];
