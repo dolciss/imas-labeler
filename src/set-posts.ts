@@ -58,10 +58,12 @@ const post = await bot.post({
 });
 */
 
-const labelNames = getLabelsForHandle(targetConfig.bskyHandle).map((label) => {
-  const defaultLocale = label.locales.find((locale) => locale.lang === DEFAULT_LANGUAGE);
-  return defaultLocale ? defaultLocale.name : label.locales.map((locale) => locale.name).join(' | ');
-});
+const labelNames = getLabelsForHandle(targetConfig.bskyHandle)
+  .filter((label) => label.identifier === 'unit-reversi')
+  .map((label) => {
+    const defaultLocale = label.locales.find((locale) => locale.lang === DEFAULT_LANGUAGE);
+    return defaultLocale ? defaultLocale.name : label.locales.map((locale) => locale.name).join(' | ');
+  });
 const labelRkeys: Record<string, string> = {};
 for (const labelName of labelNames) {
   //const labelPost = await post.reply({ text: labelName });
