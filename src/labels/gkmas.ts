@@ -186,6 +186,20 @@ export const GKMAS_LABELS: Label[] = [
     targetHandle: TARGET_HANDLE,
   },
   {
+    rkey: '3n2sabrhfck2n',
+    identifier: 'idol-kanae',
+    locales: [
+      {
+        lang: 'ja',
+        name: '氷渡香名江',
+        description:
+          '倉本家のメイドとして、倉本千奈の近侍を務める。真面目で献身的な努力家。主を中心に物事を考えており、自分自身の気持ちにはひどく鈍い。アイドルへの関心や素質を秘めているものの、本人はあくまで『お嬢様を支えるための研修』と考えている。',
+      },
+      { lang: 'en', name: 'Kanae Hiwatari', description: '' },
+    ],
+    targetHandle: TARGET_HANDLE,
+  },
+  {
     rkey: '3mcf5ng5unk2c',
     identifier: 'idol-rinha',
     locales: [
@@ -322,6 +336,32 @@ export const GKMAS_LABELS: Label[] = [
         description: '初星学園アイドル科に所属する紫雲清夏、葛城リーリヤの2人で結成されたユニット。',
       },
       { lang: 'en', name: 'REVERSI', description: '' },
+    ],
+    targetHandle: TARGET_HANDLE,
+  },
+  {
+    rkey: '3mldluttloc2d',
+    identifier: 'unit-ripplesign',
+    locales: [
+      {
+        lang: 'ja',
+        name: 'RippleSign',
+        description: '初星学園アイドル科に所属する姫崎莉波、有村麻央の2人で結成されたユニット。',
+      },
+      { lang: 'en', name: 'RippleSign', description: '' },
+    ],
+    targetHandle: TARGET_HANDLE,
+  },
+  {
+    rkey: '3n2saaubcok2n',
+    identifier: 'unit-kaigou',
+    locales: [
+      {
+        lang: 'ja',
+        name: '乖轟',
+        description: '初星学園アイドル科に所属する雨夜燕、有村麻央の2人で結成されたユニット。',
+      },
+      { lang: 'en', name: 'KAIGOU', description: '' },
     ],
     targetHandle: TARGET_HANDLE,
   },
