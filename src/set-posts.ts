@@ -58,12 +58,23 @@ const post = await bot.post({
 });
 */
 
+const targetLabel = process.argv[3];
+
+if (!targetLabel) {
+  console.error('No target label specified. Please provide a label identifier as the second argument.');
+  process.exit(1);
+}
+
 const labelNames = getLabelsForHandle(targetConfig.bskyHandle)
-  .filter((label) => label.identifier === 'unit-reversi')
+  .filter((label) => label.identifier === targetLabel)
   .map((label) => {
     const defaultLocale = label.locales.find((locale) => locale.lang === DEFAULT_LANGUAGE);
     return defaultLocale ? defaultLocale.name : label.locales.map((locale) => locale.name).join(' | ');
   });
+if (labelNames.length === 0) {
+  console.error(`No labels found for identifier: ${targetLabel}`);
+  process.exit(1);
+}
 const labelRkeys: Record<string, string> = {};
 for (const labelName of labelNames) {
   //const labelPost = await post.reply({ text: labelName });
